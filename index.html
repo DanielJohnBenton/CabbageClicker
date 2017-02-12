@@ -1,0 +1,47 @@
+
+<html>
+	<head>
+		<title>CabbageClicker</title>
+		<script type='text/javascript'>
+			var cabbage = new Array(
+				"The cabbage is unamused by your antics.",
+				"The cabbage rolls 2 inches to the left and emits a pleasant cabbage aroma.",
+				"The cabbage either cannot respond, or will not respond.",
+				"The cabbage does photosynthesis.",
+				"The cabbage is trying to tell you something, but you do not understand. You do not understand.",
+				"You place the cabbage to your ear and it emits a low cabbage sound.",
+				"You take a bite out of the cabbage. The cabbage responds \"...\".<br />You take some more bites. You have eaten the cabbage.",
+				"The cabbage needs more time.",
+				"Comparing your problems to the cabbage's problems. The cabbage turns green with envy.",
+				"The cabbage gives you an odd look and rolls a quarter inch in no particular direction.",
+				"This cabbage was genetically modified to give you bad advice #wakeup #cabbspiracy",
+				"The cabbage does not respond, but you keep clicking.",
+				"The cabbage bends to your will. The cabbage is now your slave. It will now do anything you tell it to.<br />Within limits of what a cabbage can do.",
+				"You stare intently into the folds of the cabbage. The cabbage is nervous."
+			);
+			
+			var last = 1000;
+			
+			function Cabbage()
+			{
+				var n = Math.floor(Math.random() * cabbage.length);
+				if(n == last) Cabbage();
+				
+				last = n;
+				
+				var _cabbage = document.getElementById("_cabbage");
+				_cabbage.innerHTML = cabbage[n];
+			}
+		</script>
+	</head>
+	<body>
+	<div align='center'>
+		<p>
+			<img id='cabbage' src='01.jpg' width='200px' height='200px' onclick='Cabbage()' />
+		</p>
+		<p>
+		<span id='_cabbage'>Focus carefully on your question and click the cabbage you see before you.</span>
+		</p>
+	</div>
+	</body>
+</html>
